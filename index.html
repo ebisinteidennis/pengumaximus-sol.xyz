@@ -457,6 +457,74 @@
       }
 
 
+    /* Penguins Background Styling */
+.penguins-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.penguin {
+    position: absolute;
+    width: 150px; /* Larger penguin size */
+    height: auto;
+    animation: floatPenguin 8s infinite ease-in-out; /* Faster animation */
+}
+
+/* Animating Penguins */
+@keyframes floatPenguin {
+    0% {
+        transform: translateY(100%) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-30%) rotate(20deg); /* More rotation for variety */
+    }
+    100% {
+        transform: translateY(100%) rotate(-20deg);
+        opacity: 0.5;
+    }
+}
+
+/* Adding more frequent penguins */
+.penguin:nth-child(1) {
+    animation-delay: 0s;
+    left: 10%;
+}
+
+.penguin:nth-child(2) {
+    animation-delay: 2s;
+    left: 25%;
+}
+
+.penguin:nth-child(3) {
+    animation-delay: 4s;
+    left: 40%;
+}
+
+.penguin:nth-child(4) {
+    animation-delay: 6s;
+    left: 55%;
+}
+
+.penguin:nth-child(5) {
+    animation-delay: 8s;
+    left: 70%;
+}
+
+.penguin:nth-child(6) {
+    animation-delay: 10s;
+    left: 85%;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -479,6 +547,9 @@
         </div>
     </header>
 
+   
+    
+
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>PENGUINUS $PENMAX MAXIMUS</h1>
@@ -486,6 +557,14 @@
             <button class="cta-button">Join Presale Now</button>
         </div>
     </section>
+
+    <div class="penguins-background">
+        <img src="WhatsApp Image 2025-01-03 at 16.47.50_377d8b76.jpg" alt="Penguin" class="penguin" style="left: 10%; animation-delay: 0s;">
+        <img src="WhatsApp Image 2025-01-03 at 16.47.51_5920d92c.jpg" alt="Penguin" class="penguin" style="left: 30%; animation-delay: 2s;">
+        <img src="image (3).jpg" alt="Penguin" class="penguin" style="left: 50%; animation-delay: 4s;">
+        <img src="image (1).jpg" alt="Penguin" class="penguin" style="left: 70%; animation-delay: 6s;">
+        <img src="image (2).jpg" alt="Penguin" class="penguin" style="left: 90%; animation-delay: 8s;">
+    </div>
 
     <section id="tokenomics">
     <div class="tokenomics-container">
